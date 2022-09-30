@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_black_color">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_margin="6dp"
+        android:background="@drawable/bg_rect_solid_gray_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="12dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_back_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cns_series_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/appCompatImageView5"
+                    android:layout_width="146dp"
+                    android:layout_height="192dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="26dp"
+                    android:layout_marginBottom="18dp"
+                    android:src="@mipmap/ic_launcher"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_corner_radius="10dp"
+                    tools:scaleType="fitXY" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_film_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="16dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toStartOf="@+id/appCompatImageView5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/appCompatImageView5"
+                    tools:text="The Batman" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_production_year"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    app:layout_constraintEnd_toEndOf="@+id/txt_film_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_film_name"
+                    tools:text="2022" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout16"
+                    android:layout_width="58dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/bg_rect_solid_yellow_5"
+                    app:layout_constraintEnd_toEndOf="@+id/txt_production_year"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_production_year">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appCompatImageView14"
+                        android:layout_width="21dp"
+                        android:layout_height="21dp"
+                        android:layout_marginStart="6dp"
+                        android:src="@drawable/ic_imdb"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txt_imdb"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="@font/estedad_bold"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textColor="@color/black"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/appCompatImageView14"
+                        tools:text="7.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="58dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_rect_solid_light_red_5"
+                    app:layout_constraintEnd_toEndOf="@+id/constraintLayout16"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout16">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appCompatImageView15"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="6dp"
+                        android:src="@drawable/ic_rt"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txt_rt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:fontFamily="@font/estedad_bold"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/appCompatImageView15"
+                        tools:text="70" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraintLayout15"
+                    app:layout_constraintEnd_toEndOf="@+id/txt_production_year"
+                    app:layout_constraintStart_toEndOf="@+id/constraintLayout15"
+                    app:layout_constraintTop_toTopOf="@+id/constraintLayout15">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appCompatImageView6"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_country"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_country"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/estedad_medium"
+                        android:gravity="right"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintEnd_toStartOf="@+id/appCompatImageView6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="آمریکا" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout15"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="9dp"
+                    app:layout_constraintBottom_toTopOf="@+id/constraintLayout12"
+                    app:layout_constraintEnd_toStartOf="@+id/constraintLayout14"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appCompatImageView7"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_age"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_age"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/estedad_medium"
+                        android:gravity="right"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintEnd_toStartOf="@+id/appCompatImageView7"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="PG-13" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout12"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraintLayout13"
+                    app:layout_constraintEnd_toEndOf="@+id/txt_production_year"
+                    app:layout_constraintStart_toEndOf="@+id/constraintLayout13"
+                    app:layout_constraintTop_toTopOf="@+id/constraintLayout13">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appCompatImageView8"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_time"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_length"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/estedad_medium"
+                        android:gravity="right"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintEnd_toStartOf="@+id/appCompatImageView8"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="دو ساعت و سی دقیقه" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout13"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="9dp"
+                    app:layout_constraintBottom_toTopOf="@+id/constraintLayout10"
+                    app:layout_constraintEnd_toStartOf="@+id/constraintLayout12"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appCompatImageView9"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_language"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_language"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/estedad_medium"
+                        android:gravity="right"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintEnd_toStartOf="@+id/appCompatImageView9"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="انگلیسی" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraintLayout10"
+                    app:layout_constraintEnd_toEndOf="@+id/txt_production_year"
+                    app:layout_constraintStart_toEndOf="@+id/constraintLayout10"
+                    app:layout_constraintTop_toTopOf="@+id/constraintLayout10">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appCompatImageView10"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_subtitle"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_subtitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/estedad_medium"
+                        android:gravity="right"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintEnd_toStartOf="@+id/appCompatImageView10"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="دارد" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView5"
+                    app:layout_constraintEnd_toStartOf="@+id/constraintLayout9"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appCompatImageView11"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_alert"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_multi_language"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/estedad_medium"
+                        android:gravity="right"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintEnd_toStartOf="@+id/appCompatImageView11"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="دارد" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="32dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="32dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_notification"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_stroke_notification"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toBottomOf="@+id/cns_series_info" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_bookmark"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_stroke_bookmark"
+                app:layout_constraintEnd_toStartOf="@+id/img_notification"
+                app:layout_constraintTop_toBottomOf="@+id/cns_series_info" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_favorite"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_stroke_favorite"
+                app:layout_constraintEnd_toStartOf="@+id/img_bookmark"
+                app:layout_constraintTop_toBottomOf="@+id/cns_series_info" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_download"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_stroke_download"
+                app:layout_constraintEnd_toStartOf="@+id/img_favorite"
+                app:layout_constraintTop_toBottomOf="@+id/cns_series_info" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/btn_solid_red_10"
+                android:paddingStart="20dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="6dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/cns_series_info">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appCompatImageView12"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_play"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/estedad_medium"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/appCompatImageView12"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="تماشا کنید" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/estedad_medium"
+                android:gravity="right"
+                android:maxLines="1"
+                android:text="داستان فیلم"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout11" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_movie_story"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_rect_solid_gray_10_0_10_10"
+                android:ellipsize="end"
+                android:fontFamily="@font/estedad_medium"
+                android:gravity="right"
+                android:maxLines="5"
+                android:minLines="5"
+                android:padding="6dp"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView15"
+                tools:text="بتمن در دومین سال مبارزه با جرم و جنایت، فسادی را در شهر گاتهام کشف می‌کند که به خانواده‌اش متصل می‌شود، در حالی که با یک قاتل زنجیره‌ای به نام ریدلر روبرو می‌شود" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView16"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/estedad_medium"
+                android:gravity="right"
+                android:maxLines="1"
+                android:text="تریلر"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/txt_movie_story" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/trailer"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_rect_solid_gray_10"
+                android:ellipsize="end"
+                android:fontFamily="@font/estedad_medium"
+                android:gravity="right"
+                android:maxLines="5"
+                android:minLines="5"
+                android:padding="6dp"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintDimensionRatio="w,1:1.8"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView16" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cns_episodes"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/bg_rect_solid_gray_10"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/trailer">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="3dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/estedad_medium_fd"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="لیست قسمت ها"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/AppCompatImageView2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/AppCompatImageView2"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_arrow_left"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView17"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/estedad_medium"
+                android:gravity="right"
+                android:maxLines="1"
+                android:text="بازیگران"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/cns_episodes" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_actors"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView17"
+                tools:itemCount="3"
+                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_actor"
+                tools:orientation="horizontal"
+                tools:reverseLayout="true" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView18"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/estedad_medium"
+                android:gravity="right"
+                android:maxLines="1"
+                android:text="سایر عوامل"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/rcv_actors" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_makers"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView18"
+                tools:itemCount="3"
+                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_actor"
+                tools:orientation="horizontal"
+                tools:reverseLayout="true" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView19"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/estedad_medium"
+                android:gravity="right"
+                android:maxLines="1"
+                android:text="فیلم های مرتبط"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/rcv_makers" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_related_movies"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView19"
+                tools:itemCount="3"
+                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_movie"
+                tools:orientation="horizontal"
+                tools:reverseLayout="true" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView20"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/estedad_medium"
+                android:gravity="right"
+                android:maxLines="1"
+                android:text="دیدگاه ها"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/rcv_related_movies" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout20"
+                android:layout_width="0dp"
+                android:layout_marginTop="24dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rect_solid_blue_gray_10"
+                app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView20">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appCompatImageView13"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_send"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_my_comment"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginEnd="14dp"
+                    android:background="@null"
+                    android:fontFamily="@font/estedad_medium_fd"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="100"
+                    android:paddingBottom="2dp"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:textColorHint="@color/white"
+                    android:hint="دیدگاه شما"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/appCompatImageView13"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_comments"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout20" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
